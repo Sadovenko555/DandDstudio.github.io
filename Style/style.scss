@@ -1,0 +1,178 @@
+
+$red: red;
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    background-color: rgb(10, 10, 10);
+}
+
+
+header {
+    background-color: rgb(10, 10, 10);
+
+}
+
+#checkbox-menu,
+.toggle {
+    display: none;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.menu li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    align-self: center;
+    font-size: 15px;
+    padding: 10px 15px;
+    transition: background .2s linear;
+
+}
+
+.menu li a:hover {
+    background: rgba(255, 235, 205, 0.315);
+    border-radius: 5px;
+}
+
+.menu li a.logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    margin-right: 240px;
+    color: rgb(252, 252, 252);
+}
+
+.menu li a.logo:hover {
+    background: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.intro {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.intro-img {
+    background-image: url(img/dark.jpg);
+    width: 965px;
+    height: 640px;
+}
+
+
+.intro .intro-text {
+    position: absolute;
+    font-size: 62px;
+    right: 950px;
+    top: 220px;
+    color: rgb(219, 156, 60);
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 765px) {
+    .toggle {
+        clear: both;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+        widows: 100%;
+        color: black;
+        background: rgb(114, 114, 114);
+        transition: all .1s linear;
+    }
+
+    .toggle:hover {
+        background: rgb(114, 114, 114);
+    }
+
+    #checkbox-menu:checked+label .touch li {
+        opacity: 1;
+        visibility: visible;
+        transition: all .7 linear;
+    }
+
+    #checkbox-menu:checked+label .touch {
+        height: 350px;
+
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 0px;
+        transition: height .3s linear;
+    }
+
+    .menu li {
+        display: flex;
+        align-self: center;
+        width: 95%;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .menu li a {
+        width: 95%;
+        text-align: center;
+        align-self: center;
+        align-content: center;
+
+    }
+
+    .menu li a.logo {
+        font-size: 21px;
+        margin-right: 0px;
+
+    }
+
+    .menu li a.contacts {
+        margin-right: 0px;
+    }
+
+    .intro {
+        margin-top: 0;
+        display: block;
+        max-width: 100%;
+    }
+
+    .intro-img {
+        background-position: bottom 50px right 570px;
+    }
+
+    .intro .intro-text {
+        position: relative;
+        font-size: 35px;
+        right: -10px;
+        text-outline: 95px;
+    }
+}
